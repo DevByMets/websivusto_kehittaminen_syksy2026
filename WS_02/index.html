@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aleksei | Verkkoprojektit</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="stylesheet" href="style.css"> <!-- CSS-tiedosto -->
+    <style>
+        .content-box {
+            padding: 20px;
+            margin: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: lightgray;
+        }
+        h1 {
+            color: darkgray;
+            font-size: 2em;
+        }
+        h2 {
+            color: darkgreen;
+        }
+        p {
+            font-size: 16px;
+            color: blue;
+        }
+        ul, ol {
+            margin-left: 25px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        </style>
+</head>
+<body>
+    <div class="content-box">
+        <h1>Aleksei Mets</h1>
+        <h2 style="color: darkblue">Tietoa minusta</h2> <!-- Inline CSS lisätty otsikon värin muuttamiseksi -->
+        <p>Olen Aleksei ja opiskelen tietojekäsittelyä Laurea-ammattikorkeakoulussa. Olen kiinnostunut ohjelmoinnista ja IT-infrastruktuurista.</p>
+        <img src="./IMG_0895.jpg" alt="Kuva minusta" width="300">
+    </div>
+    <h2>Harrastukset</h2>
+    <ul>
+        <li>Autojen korjaaminen</li>
+        <li>Kirjojen lukeminen</li>
+        <li>Taksilla ajaminen</li>
+        <li>Vaeltaminen</li>
+        <li>Kalastaminen</li>
+        <li>IT-harrastukset:</li>
+        <ol>
+            <li>Kasaaminen palvelin</li>
+            <li>Ohjelmointi</li>
+            <li>IT-infrastruktuuri</li>
+        </ol>
+    </ul>
+
+    <h2>Suosikkisivustoni</h2>
+    <p>Olen kiinnostunut esimerkiksi <a href="https://www.codecademy.com/">Codecademy</a> kursseista.</p>
+
+    <table>
+        <tr>
+            <th>Kurssi</th>
+            <th class="kuvaus">Kuvaus</th>
+        </tr>
+        <tr>
+            <td>Web Development</td>
+            <td>Opettele luomaan verkkosivuja</td>
+        </tr>
+        <tr>
+            <td>Python Programming</td>
+            <td>Opettele ohjelmoinnin perusteet Python-kielellä</td>
+        </tr>
+        <tr>
+            <td>IT-infrastruktuuri</td>
+            <td>Tietojenverkkojen ja palvelimet perusteet</td>
+        </tr>
+    </table>
+    <br>
+    <form>
+        <label for="name">Nimi:</label>
+        <input type="text" id="name" name="name">
+        <br>
+        <label for="email">Sähköposti:</label>
+        <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Syötä sähköpostiosoite" required>
+        <br>
+        <input type="submit" value="Lähetä">
+    </form>
+</body>
+</html>
