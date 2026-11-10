@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aleksei | Verkkoprojektit</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="stylesheet" href="style.css"> <!-- CSS-tiedosto -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: lightgray;
+        }
+        h1 {
+            color: darkgray;
+            font-size: 2em;
+        }
+        h2 {
+            color: darkgreen;
+        }
+        ul, ol {
+            margin-left: 25px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        /* Lisätty CSS-luokka sisältölaatikolle */
+        .content-box {
+            padding: 20px;
+            margin: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+        }
+        /* Lisätty CSS-transition */
+        .transition-button {
+            background-color: lightblue;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-bottom: 25px;
+        }
+        .transition-button:hover {
+            background-color: lightcoral;
+        }
+        /*Lisätty CSS-animaatio*/
+        .animation-box { 
+            width: 50px;
+            height: 50px;
+            background-color: lightgreen;
+            position: relative;
+            animation: move 2s infinite alternate;
+            margin-bottom: 25px;
+        }
+        @keyframes move {
+            from { left: 0; }
+            to { left: 97%; }
+        }
+        /* Lisätty CSS Pseudo-elementit */
+        .pseudo-list li:nth-child(odd) {
+            background-color: lightgray;
+        }
+        .pseudo-list li:nth-child(even) {
+            background-color: white;
+        }
+        /* Lisätty CSS-kuvan filtteri */
+        .filter-image {
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+        .filter-image:hover {
+            filter: grayscale(0%);
+        }
+        /* Lisätty CSS-quote-elementti */
+        .quote {
+            position:relative;
+            padding-left: 20px;
+            font-style: italic;
+        }
+        .quote::before {
+            content: "“";
+            font-size: 40px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-box">
+        <h1>Aleksei Mets</h1>
+        <h2 style="color: darkblue">Tietoa minusta</h2> <!-- Inline CSS lisätty otsikon värin muuttamiseksi -->
+        <p>Olen Aleksei ja opiskelen tietojekäsittelyä Laurea-ammattikorkeakoulussa. Olen kiinnostunut ohjelmoinnista ja IT-infrastruktuurista.</p>
+        <img src="./IMG_0895.jpg" alt="Kuva minusta" width="300" class="filter-image"> <!-- Lisätty kuvan suodatin -->
+        <blockquote class="quote"> <!-- Lisätty quote-elementti -->
+            <p>"Opiskelu on jatkuva prosessi, jossa oppiminen ei lopu koskaan."</p>
+            <cite>- Aleksei Mets</cite>
+        </blockquote>
+    </div>
+    <h2>Harrastukset</h2>
+    <ul class="pseudo-list">
+        <li>Autojen korjaaminen</li>
+        <li>Kirjojen lukeminen</li>
+        <li>Taksilla ajaminen</li>
+        <li>Vaeltaminen</li>
+        <li>Kalastaminen</li>
+        <li>IT-harrastukset:</li>
+            <ol>
+                <li>Kasaaminen palvelin</li>
+                <li>Ohjelmointi</li>
+                <li>IT-infrastruktuuri</li>
+            </ol>
+        
+    </ul>
+
+    <h2>Suosikkisivustoni</h2>
+    <p class="suosikki">Olen kiinnostunut esimerkiksi <a href="https://www.codecademy.com/">Codecademy</a> kursseista.</p>
+    <button class="transition-button">Kosketa minut</button> 
+    <table>
+        <tr>
+            <th>Kurssi</th>
+            <th class="kuvaus">Kuvaus</th>
+        </tr>
+        <tr>
+            <td>Web Development</td>
+            <td>Opettele luomaan verkkosivuja</td>
+        </tr>
+        <tr>
+            <td>Python Programming</td>
+            <td>Opettele ohjelmoinnin perusteet Python-kielellä</td>
+        </tr>
+        <tr>
+            <td>IT-infrastruktuuri</td>
+            <td>Tietojenverkkojen ja palvelimet perusteet</td>
+        </tr>
+    </table>
+    <br>
+    <form>
+        <label for="name">Nimi:</label>
+        <input type="text" id="name" name="name">
+        <br>
+        <label for="email">Sähköposti:</label>
+        <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Syötä sähköpostiosoite" required>
+        <br>
+        <div class="animation-box"></div>
+        <input type="submit" value="Lähetä">
+    </form>
+</body>
+</html>
