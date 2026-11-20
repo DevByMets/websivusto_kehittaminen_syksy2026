@@ -1,3 +1,4 @@
+/* Responsive layout for columns*/
 .responsive-container {
   display: flex;
   flex-wrap: wrap;
@@ -10,4 +11,9 @@
   .column {
     flex: 100%;
   }
+}
+/* Responsive image */
+.responsive-image {
+  max-width: 100%;
+  height: auto;
 }
