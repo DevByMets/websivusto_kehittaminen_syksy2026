@@ -32,3 +32,23 @@
     background-color: lightblue;
   }
 }
+/* Responsive navigation menu */
+.responsive-nav .nav-list  {
+  display: flex;
+  list-style: none;
+}
+@media (max-width: 600px) {
+  .responsive-nav .nav-list {
+    display: none;
+  }
+  .responsive-nav .menu-toggle {
+    display: flex;
+  }
+}
+/* My suggestions fixing */
+.responsive-nav .nav-item {
+  margin-right: 20px;
+}
+.menu-toggle {
+  display:none;
+}
